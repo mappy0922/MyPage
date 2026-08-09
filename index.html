@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>サイボウズ</title>
+</head>
+
+<body>
+    <h1>自己紹介</h1>
+
+    <div class="top1">
+
+        <details class="accordion1" id="accordion">
+            <summary>① Profile</summary>
+
+            <div class="Profile">
+                <h2>・名前 : 斎藤柾宏 (サイトウ マサヒロ)</h2>
+                <img src="./images/pikatyu.png" alt="プロフィール画像" width="200">
+                <h2>・ニックネーム : masa</h2>
+                <h2>・年齢 : <span id="age"></span>歳</h2>
+                <h2>・所属 : 日本大学文理学部情報科学科</h2>
+                <h2>・所属サークル名 : LoGeek</h2>
+                <h2>・出身 : 神奈川県</h2>
+            </div>
+        </details>
+
+        <details class="accordion2" id="accordion">
+            <summary>② About Me</summary>
+
+            <div class="Profile">
+                <h2>・性格 : 真面目(ってよく言われます！！)、心配性</h2>
+                <h2>・趣味 : ゲーム(ゼルダの伝説、FF7 or FF10、APEX)<br>　　　　アニメ鑑賞(コナン、フリーレン、薬屋)
+                </h2>
+                <h2>・学歴</h2>
+                <div class="Academic_background">
+                    <p>・2023年3月　神奈川県立横浜南陵高等学校　卒業</p>
+                    <p>・2024年4月　日本大学文理学部情報科学科　入学</p>
+                    <p>・2026年8月　LoGeek　加入</p>
+                </div>
+            </div>
+        </details>
+
+        <details class="accordion3" id="accordion">
+            <summary>③ Skills</summary>
+
+            <div class="Profile">
+                <h2>・Languages : C/Python/Java/JavaScript</h2>
+                <h2>・Web : HTML/CSS/React</h2>
+                <h2>・Data Visualization : D3.js</h2>
+                <h2>・Tools : Git/GitHub/VS Code/Unity</h2>
+            </div>
+        </details>
+
+        <details class="accordion4" id="accordion">
+            <summary>④ Qualification</summary>
+
+            <div class="Profile">
+                <h2>第一種運転免許<br>基本情報技術者試験</h2>
+            </div>
+        </details>
+
+    </div>
+
+    <script>
+        const accordion = document.getElementById("accordion");
+        const content = accordion.querySelector(".Profile");
+
+        accordion.addEventListener("toggle", () => {
+            if (accordion.open) {
+                content.animate(
+                    [
+                        {
+                            opacity: 0,
+                            transform: "translateY(-10px)"
+                        },
+                        {
+                            opacity: 1,
+                            transform: "translateY(0)"
+                        }
+                    ],
+                    {
+                        duration: 300,
+                        easing: "ease-out"
+                    }
+                );
+            }
+        });
+
+        const today = new Date();
+
+        let age = 20;
+
+        if (
+            today.getMonth() > 2 ||
+            (today.getMonth() === 2 && today.getDate() >= 29)
+        ) {
+            age++;
+        }
+
+        document.getElementById("age").textContent = age;
+    </script>
+
+</body>
+
+</html>

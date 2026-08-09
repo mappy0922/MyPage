@@ -1,0 +1,44 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: blanchedalmond;
+}
+
+h1 {
+    color: lightblue;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+}
+
+.top1 {
+    margin: 50px 0 0 30px;
+}
+
+.Profile {
+    margin-left: 30px;
+    font-size: 13px;
+}
+
+summary {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.Academic_background {
+    font-size: 12.5px;
+    margin-left: 30px;
+}
+
+.accordion1,
+.accordion2,
+.accordion3,
+.accordion4 {
+    background-color: burlywood;
+    margin-bottom: 15px;
+    padding: 10px;
+}
